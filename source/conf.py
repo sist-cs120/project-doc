@@ -31,3 +31,4 @@ html_static_path = ['_static']
 
 numfig = True
 numfig_format={'figure': 'Figure %s.'}
+
