@@ -1,0 +1,14 @@
+=======================================================
+About the Course Project
+=======================================================
+
+When I joined ShanghaiTech in 2017, it was the young university's 4th year of establishment. The school wanted me to offer a course on computer networks for undergraduate students. Before taking the role to teach this course, I have studied computer networks, served as a teaching assistant multiple times, and engaged in research in related fields for many years. Despite the abundance of teaching resources from previous instructors and online open courses, I felt that there was still room for me to contribute. My own feeling is, simply delivering theoretical knowledge might make students feel it is abstract and dry, while fragmented course experiments highlighting individual algorithms and mechanisms cannot provide a holistic understanding of real networks. I hope that the course I offer can present computer networks as comprehensively and vividly as possible to our students.
+
+I hope that students can implement a complete and real computer network through course projects, helping them understand the core design principles and trade-offs in network engineering practices. To simplify the implementation, I chose to use sound cards instead of actual network cards to manipulate physical signals. It allows for a bottom-up construction of all the network layers with manageable workload. I documented my implementation in the following sections to guide students in their implementations. 
+
+The project tasks are goal-oriented and does not specify implementation framework and details. The students can freely choose programming languages and decide the way they accomplish them. Completing the entire project is interesting and challenging. Every year many enthusiastic students attempt it and enjoy the learning and practicing experience it provides.
+
+Over the past years, I have collected and carefully reviewed feedback from each student. The teaching assistants and I continuously improved the course content. The stable version of the course project is now hosted online for open access and discussion. I want to express my gratitude to every student who has enrolled in this course, as well as to the teaching assistants who have dedicated their time and experience to the course. 
+
+Computer networks have evolved into something intricate and vast. The aforementioned practices inevitably reflect my personal taste and cannot cover every aspect. However, I always strive to present the essential and foundational elements to the students. The current version has room for improvement. For instance, I plan to integrate network simulators with students' physical implementations in the future to better cover topics like routing, which involve many network nodes and are currently practiced separately in a purely simulated environment.
+
