@@ -219,7 +219,7 @@ Almost all commercial network card's physical layer processing is done through c
 
     - Use look up table to implement complex functions.
 
-    - Some AISO wrappers expose data interface in float format. To complete this task, please do an additional conversion from float/double to ``INT32``. Then, just pretend to ignore the conversion.
+    - Some ASIO wrappers expose data interface in float format. To complete this task, please do an additional conversion from float/double to ``INT32``. Then, just pretend to ignore the conversion.
     
     - This task may be incompatible with other optional tasks or require an excessive workload.
 
@@ -236,7 +236,7 @@ Almost all commercial network card's physical layer processing is done through c
 Task 7: (Optional, 1 point) MIMO
 ============================================================
 
-Multiple Input Multiple Output (MIMO_) systems are a significant advancement in modern communication systems. Radio MIMO designs distinguish multiple simultaneous data streams through leveraging differences in the propagation paths between different Tx and Rx antennas. Please prepare two microphones for the Rx node and two speakers for the Tx node, and refer to radio MIMO designs [CCR10]_ to implement a 2×2 audio MIMO system.
+(TODO) Multiple Input Multiple Output (MIMO_) systems are a significant advancement in modern communication systems. Radio MIMO designs distinguish multiple simultaneous data streams through leveraging differences in the propagation paths between different Tx and Rx antennas. Please prepare two microphones for the Rx node and two speakers for the Tx node, and refer to radio MIMO designs [CCR10]_ to implement a 2×2 audio MIMO system.
 
 .. admonition:: Performance Assessment
     
