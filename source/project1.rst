@@ -248,9 +248,6 @@ For this task, please prepare two microphones for the Rx node and two speakers f
 .. tip::
     
     - While MIMO is often used with OFDM in modern communication systems, it is not mandatory. Implementing MIMO with a single carrier is more straightforward.
-=======
-(TODO) Multiple Input Multiple Output (MIMO_) systems are a significant advancement in modern communication systems. Radio MIMO designs distinguish multiple simultaneous data streams through leveraging differences in the propagation paths between different Tx and Rx antennas. Please prepare two microphones for the Rx node and two speakers for the Tx node, and refer to radio MIMO designs [CCR10]_ to implement a 2×2 audio MIMO system.
->>>>>>> 40f2fb8eae235438fdb03e1f9d569d8904f5f631
 
 .. admonition:: Performance Assessment
     
