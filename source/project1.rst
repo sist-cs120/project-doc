@@ -235,7 +235,6 @@ Almost all commercial network card's physical layer processing is done through c
 Task 7: (Optional, 1 point) MIMO
 ============================================================
 
-<<<<<<< HEAD
 Multiple Input Multiple Output (MIMO_) systems [CCR10]_ are a significant advancement in modern communication systems. Radio MIMO systems employ multiple antennas to simultaneously transfer multiple data streams within the same frequency band. The receiver distinguishes these *overlapping* streams through leveraging the differences, i.e., phase shifts and amplitude attenuation, in the propagation paths between different Tx and Rx antennas pairs. These differences are formally described in CSI_ (channel state information) and can be measured using predefined patterns located after the synchronization preamble and before valid data symbols.
 
 For this task, please prepare two microphones for the Rx node and two speakers for the Tx node, and refer to radio MIMO designs, e.g., a neat example from WARP_ project, to implement a 2×2 audio MIMO system. MIMO systems rely on precise synchronization to separate concurrent streams, so they usually use the same clock to sample signals received in different Rx paths. You can reach out to the TA to borrow the audio tool set exclusively for this task:
