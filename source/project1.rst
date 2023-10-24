@@ -235,11 +235,23 @@ Almost all commercial network card's physical layer processing is done through c
 Task 7: (Optional, 1 point) MIMO
 ============================================================
 
-Multiple Input Multiple Output (MIMO_) systems are a significant advancement in modern communication systems. Radio MIMO designs distinguish multiple simultaneous data streams through leveraging differences in the propagation paths between different Tx and Rx antennas. Please prepare two microphones for the Rx node and two speakers for the Tx node, and refer to radio MIMO designs [CCR10]_ to implement a 2×2 audio MIMO system.
+Multiple Input Multiple Output (MIMO_) systems [CCR10]_ are a significant advancement in modern communication systems. Radio MIMO systems employ multiple antennas to simultaneously transfer multiple data streams within the same frequency band. The receiver distinguishes these *overlapping* streams through leveraging the differences, i.e., phase shifts and amplitude attenuation, in the propagation paths between different Tx and Rx antennas pairs. These differences are formally described in CSI_ (channel state information) and can be measured using predefined patterns located after the synchronization preamble and before valid data symbols.
+
+For this task, please prepare two microphones for the Rx node and two speakers for the Tx node, and refer to radio MIMO designs, e.g., a neat example from WARP_ project, to implement a 2×2 audio MIMO system. MIMO systems rely on precise synchronization to separate concurrent streams, so they usually use the same clock to sample signals received in different Rx paths. You can reach out to the TA to borrow the audio tool set exclusively for this task:
+
+- USB audio card supporting stereo recording ×1
+
+- Microphone with XLR output ×2
+
+- Loudspeakers are not included
+
+.. tip::
+    
+    - While MIMO is often used with OFDM in modern communication systems, it is not mandatory. Implementing MIMO with a single carrier is more straightforward.
 
 .. admonition:: Performance Assessment
     
-    ``NODE1``'s speakers are positioned at least 50 cm away from ``NODE2``'s microphones.
+    ``NODE1``'s speakers are positioned at least 40 cm away from ``NODE2``'s microphones.
 
         Transmission completion time:
 
@@ -250,15 +262,21 @@ Multiple Input Multiple Output (MIMO_) systems are a significant advancement in 
             +-----------------+-------------------+
             | Completion Time | Percentage Earned |
             +=================+===================+
-            |            <10s |              100% |
+            |            <20s |              100% |
             +-----------------+-------------------+
-            |            >10s |                0% |
+            |            >20s |                0% |
             +-----------------+-------------------+
 
     Other assessment criteria and procedures are the same as in Task 4.
 
 .. _MIMO:
     https://en.wikipedia.org/wiki/MIMO
+
+.. _CSI:
+    https://en.wikipedia.org/wiki/Channel_state_information
+
+.. _WARP:
+    https://warpproject.org/trac/wiki/WARPLab/Examples/MIMO_OFDM
 
 Task 8: (Optional, 4 points) Range Challenge
 ============================================================
