@@ -22,9 +22,9 @@ Project 2. Manage Multiple Access
     
     - Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
     
-    - *Task 5, 6, and 7* are graded by TAs.
+    - *Task 5 and 6* are graded by TAs.
     
-    - Tasks are graded according to their hierarchy. The hierarchy of this project is *Task 1 < Task 2 < Task 3 < Task 7*, and *Task 1 < Task 2 < Task 3 < Task 4*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<"). 
+    - Tasks are graded according to their hierarchy. The hierarchy of this project is *Task 1 < Task 2 < Task 3 < Task 6*, and *Task 1 < Task 2 < Task 3 < Task 4*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<"). 
 
     - Free to use any tools for debugging, but only the provided toolkit is permitted in performance assessment.
 
