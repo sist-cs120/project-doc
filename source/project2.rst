@@ -32,7 +32,7 @@ Project 2. Manage Multiple Access
 Overview
 ============================================================
 
-This project aims to enable multiple devices to share the audio medium for relatively reliable data transmission, building upon the results of :doc:`Project 1 <project1>`. To simplify the physical layer implementation, network devices will no longer be connected through sound but via audio cables. These cables carry analog electrical signals driving the loudspeakers, acting as an 'electromagnetic mirror' of the actual sound. It is worth noting that such wired connections are similar to Ethernet, making the `CSMA/CD`_ mechanism an important reference for this project.
+This project aims to enable multiple devices to share the audio medium for relatively reliable data transmission, building upon the results of :doc:`Project 1 <project1>`. To simplify the physical layer implementation, network devices will no longer be connected through sound but via audio cables. These cables carry analog electrical signals driving the loudspeakers, acting as an 'electromagnetic mirror' of the actual sound. It is worth noting that such wired connections are similar to Ethernet, making the `CSMA/CD`_ mechanism an good reference for this project.
 
 However, unlike Ethernet, there is a significant latency (~20 ms) when using the sound card for carrier sensing. This latency arises because the sound card is not designed for this purpose, and we have to process carrier information in the digital domain. This delay reduces the efficiency of CSMA and, more importantly, prevents the implementation of an effective collision detection mechanism. Therefore, we will use ACK to handle error frames. In this sense, the access mechanism is more akin to what is adopted in wireless situations like Wi-Fi. :numref:`Figure %s <fig-project2-overview>` illustrates the program architecture of this project.
 
@@ -357,7 +357,7 @@ The ``Jammer``'s behavior can be described as follows: its jamming duration foll
 
 .. admonition:: Performance Assessment
     
-    The group provides two devices: ``NODE1`` and ``NODE2`` and TAs provide a ``Jammer``. They are connected according to :numref:`Figure %s <fig-project2-net-2nodejam>`. The ``Jammer`` uses the USB sound card from the toolkit to emit jamming signals. The script for generating the jamming signal is uploaded to Blackboard. The output gain level of the ``Jammer`` is set to 80 in the windows 10 operating system.
+    The group provides two devices: ``NODE1`` and ``NODE2`` and TAs provide a ``Jammer``. They are connected according to :numref:`Figure %s <fig-project2-net-2nodejam>`. The ``Jammer`` uses the USB sound card from the toolkit to emit jamming signals. The script for generating the jamming signal is uploaded to Blackboard. The output gains/volumes of the ``Jammer`` and ``NODE*`` operating systems are set to similar levels (± 10%).
 
         Transmission must be completed within 120 seconds, other assessment criteria and procedures are the same as in Task 3:
     
@@ -418,12 +418,14 @@ Let's try with more nodes.
 
     - The provided mixer is a `passive mixer`_. Its output power depends on the number of connected input and output connectors. When connecting more or fewer devices, such as monitoring headphones, to it, the signal strength at the receiver should be reevaluated.
 
+    - You may need additional cables.
+
 .. _passive mixer:
     https://sound-au.com/articles/audio-mixing.htm
 
 .. admonition:: Performance Assessment
     
-    The group provides four devices: ``NODE1``, ``NODE2``, ``NODE3``, and ``NODE4``. They are connected according to :numref:`Figure %s <fig-project2-net-4node>`.
+    The group provides **four** devices: ``NODE1``, ``NODE2``, ``NODE3``, and ``NODE4``. They are connected according to :numref:`Figure %s <fig-project2-net-4node>`.
 
     TAs provide a binary file  ``INPUT1to2.bin``, which contains 6,250 Bytes. ``NODE1`` sends the bits from the file to ``NODE2``. ``NODE2`` stores the received bits in ``OUTPUT1to2.bin``. TAs provide a binary file  ``INPUT2to1.bin``, which contains 6,250 Bytes. ``NODE2`` sends the bits from the file to ``NODE1``. ``NODE1`` stores the received bits in ``OUTPUT2to1.bin``. 
     
@@ -440,13 +442,13 @@ Let's try with more nodes.
             +-----------------+-------------------+
             |         MAX(Ti) | Percentage Earned |
             +=================+===================+
-            |          <160 s |              100% |
+            |          <120 s |              100% |
             +-----------------+-------------------+
-            |          <200 s |               75% |
+            |          <160 s |               75% |
             +-----------------+-------------------+
-            |          <240 s |               50% |
+            |          <200 s |               50% |
             +-----------------+-------------------+
-            |          >240 s |                0% |
+            |          >200 s |                0% |
             +-----------------+-------------------+
         
         Their completion times should be close enough:
@@ -458,9 +460,9 @@ Let's try with more nodes.
             +-----------------+-------------------+
             | MAX(Ti)- MIN(Ti)| Percentage Earned |
             +=================+===================+
-            |           <10 s |              100% |
+            |           <20 s |              100% |
             +-----------------+-------------------+
-            |           >10 s |                0% |
+            |           >20 s |                0% |
             +-----------------+-------------------+
 
         TAs use ``diff`` tool to compare ``INPUT*.bin`` and ``OUTPUT*.bin``:
