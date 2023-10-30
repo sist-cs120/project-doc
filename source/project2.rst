@@ -433,7 +433,7 @@ Let's try with more nodes.
     
     ``NODE1``, ``NODE2``, ``NODE3``, and ``NODE4`` start transmission simultaneously. TAs record their completion times as T1, T2, T3, and T4.
     
-        Transmission must be completed within 240 seconds:
+        Transmission must be completed within 160 seconds:
 
         .. table:: 
             :widths: 30, 30
@@ -444,11 +444,11 @@ Let's try with more nodes.
             +=================+===================+
             |          <120 s |              100% |
             +-----------------+-------------------+
-            |          <160 s |               75% |
+            |          <140 s |               75% |
             +-----------------+-------------------+
-            |          <200 s |               50% |
+            |          <160 s |               50% |
             +-----------------+-------------------+
-            |          >200 s |                0% |
+            |          >160 s |                0% |
             +-----------------+-------------------+
         
         Their completion times should be close enough:
@@ -460,9 +460,9 @@ Let's try with more nodes.
             +-----------------+-------------------+
             | MAX(Ti)- MIN(Ti)| Percentage Earned |
             +=================+===================+
-            |           <20 s |              100% |
+            |           <15 s |              100% |
             +-----------------+-------------------+
-            |           >20 s |                0% |
+            |           >15 s |                0% |
             +-----------------+-------------------+
 
         TAs use ``diff`` tool to compare ``INPUT*.bin`` and ``OUTPUT*.bin``:
