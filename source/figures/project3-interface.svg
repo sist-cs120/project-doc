@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229.68mm" height="149.64mm" version="1.0" xmlns="http://www.w3.org/2000/svg">
+ <path d="m0 193.23h860.38" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width=".68138px"/>
+ <path d="m0 416.88h868.07" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width=".68138px"/>
+ <g fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px">
+  <text x="24.612329" y="445.00629" style="line-height:125%" xml:space="preserve"><tspan x="24.612329" y="445.00629"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Hardware</tspan></tspan></text>
+  <text x="24.612329" y="226.12643" style="line-height:125%" xml:space="preserve"><tspan x="24.612329" y="226.12643"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Kernel</tspan></tspan></text>
+  <text x="24.612329" y="178.40283" style="line-height:125%" xml:space="preserve"><tspan x="24.612329" y="178.40283"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">User</tspan></tspan></text>
+ </g>
+ <path d="m306.46 329.43v71.144h181.41v-71.144z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m306.46 329.43h181.41v71.144h-181.41z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <text x="318.7211" y="357.5303" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="318.7211" y="357.5303"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Virtual Network </tspan></tspan></text>
+ <text x="362.97046" y="386.38858" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="362.97046" y="386.38858"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Device</tspan></tspan></text>
+ <path d="m144.25 216.24h343.61v87.096h-343.61z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <text x="250.6445" y="268.66431" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="250.6445" y="268.66431"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">TCP/IP Stack</tspan></tspan></text>
+ <path d="m166.54 40.061v100.08h281.27v-100.08z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m166.54 40.061h281.27v100.08h-281.27z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <path d="m178.34 52.225v100.08h281.27v-100.08z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m178.36 52.225h281.25v100.08h-281.25z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <path d="m190.67 64.25v100.08h281.25v-100.08z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m190.67 64.25h281.25v100.08h-281.25z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <text x="269.76407" y="123.15504" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="269.76407" y="123.15504"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Applications</tspan></tspan></text>
+ <path d="m604.14 215.8h208.18v87.537h-208.18z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <text x="648.48444" y="268.43637" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="648.48444" y="268.43637"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Audio Stack</tspan></tspan></text>
+ <path d="m604.14 329.43v164.33h208.18v-164.33z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m604.14 329.43h208.18v164.33h-208.18z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <text x="641.10962" y="357.52902" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="641.10962" y="357.52902"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Audio Device</tspan></tspan></text>
+ <path d="m602.66 1.002v168.1h209.66v-168.1z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m602.66 1.002h209.66v168.1h-209.66z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <g>
+  <text x="659.96893" y="29.112345" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="659.96893" y="29.112345"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Aethernet</tspan></tspan></text>
+  <text x="666.22156" y="57.970623" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="666.22156" y="57.970623"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Program</tspan></tspan></text>
+  <path d="m639.77 480.53h47.857v36.153h-16.193v41.444l-3.6073-6.0121-3.7676 11.744-8.0964-5.2506v-41.925h-16.193z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <path d="m639.77 480.53h47.857v36.153h-16.193v41.444l-3.6073-6.0121-3.7676 11.744-8.0964-5.2506v-41.925h-16.193z" fill="none" stroke="#228b22" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <g>
+  <text x="646.24475" y="495.99347" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="646.24475" y="495.99347"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400">Audio</tspan></tspan></text>
+  <text x="647.367" y="512.82745" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="647.367" y="512.82745"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400">Cable</tspan></tspan></text>
+  <path d="m664.1 526.82v13.828h-0.68138v-13.828zm3.6874 12.505-4.0081 8.0162-4.0081-8.0162z" fill="#228b22" stroke="#228b22" stroke-linejoin="round" stroke-width=".040081px"/>
+  <path d="m144.25 329.41v164.33h144.63v-164.33z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <path d="m144.25 329.41h144.63v164.33h-144.63z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <g>
+  <text x="175.65015" y="357.5303" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="175.65015" y="357.5303"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Ethernet </tspan></tspan></text>
+  <text x="182.38374" y="386.38858" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="182.38374" y="386.38858"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">Device</tspan></tspan></text>
+  <path d="m158.76 394.56v39.299h115.61v-39.299z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <path d="m158.76 394.56h115.61v39.299h-115.61z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3427px"/>
+ <text x="189.29774" y="423.09912" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="189.29774" y="423.09912"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">MAC</tspan></tspan></text>
+ <path d="m158.76 442.97v39.299h115.61v-39.299z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m158.76 442.97h115.61v39.299h-115.61z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3427px"/>
+ <g>
+  <text x="192.66455" y="471.51419" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="192.66455" y="471.51419"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">PHY</tspan></tspan></text>
+  <path d="m216.92 538.69v12.385h-0.68138v-12.385zm-4.3688 1.3227 4.0081-8.0162 4.0081 8.0162zm8.0162 9.6996-4.0081 8.0162-4.0081-8.0162z" stroke="#000" stroke-linejoin="round" stroke-width=".040081px"/>
+  <path d="m192.67 491.47c0-1.8437 1.483-3.3267 3.3267-3.3267h41.163c1.8437 0 3.3267 1.483 3.3267 3.3267v37.235c0 1.8036-1.483 3.3267-3.3267 3.3267h-41.163c-1.8437 0-3.3267-1.5231-3.3267-3.3267z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <g fill="none" stroke="#000" stroke-miterlimit="8">
+  <path d="m192.67 491.47c0-1.8437 1.483-3.3267 3.3267-3.3267h41.163c1.8437 0 3.3267 1.483 3.3267 3.3267v37.235c0 1.8036-1.483 3.3267-3.3267 3.3267h-41.163c-1.8437 0-3.3267-1.5231-3.3267-3.3267z" stroke-width="1.3227px"/>
+  <path d="m199.88 495.6h32.826v17.636h-4.2887v5.0903h-5.2105v5.6915h-13.868v-5.6915h-5.1704v-5.0903h-4.2887z" stroke-width="1.3227px"/>
+  <g stroke-width="1.3427px">
+   <path d="m203.71 496.06v6.8939"/>
+   <path d="m207.3 496.06v6.8939"/>
+   <path d="m210.89 496.06v6.8939"/>
+   <path d="m214.45 496.06v6.8939"/>
+   <path d="m218.04 496.06v6.8939"/>
+   <path d="m221.63 496.06v6.8939"/>
+   <path d="m225.21 496.06v6.8939"/>
+   <path d="m228.78 496.06v6.8939"/>
+  </g>
+ </g>
+ <g>
+  <path d="m664.3 55.552v416.6h-1.3628v-416.6zm3.3267 415.28-4.0081 8.0162-4.0081-8.0162z" fill="#228b22" stroke="#228b22" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".040081px"/>
+  <path d="m747.19 39.76v442.53h-1.3628v-442.53zm-4.6895 1.3227 4.0081-8.0162 4.0081 8.0162z" fill="#c00000" stroke="#c00000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".040081px"/>
+  <path d="m721.78 480.69h47.857v36.153h-16.193v41.444l-3.6073-6.0121-3.7676 11.744-8.0964-5.2506v-41.925h-16.193z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <path d="m721.78 480.69h47.857v36.153h-16.193v41.444l-3.6073-6.0121-3.7676 11.744-8.0964-5.2506v-41.925h-16.193z" fill="none" stroke="#c00000" stroke-miterlimit="8" stroke-width="2.004px"/>
+ <g>
+  <text x="728.24371" y="496.14908" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="728.24371" y="496.14908"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400">Audio</tspan></tspan></text>
+  <text x="729.36597" y="512.98309" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="729.36597" y="512.98309"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="14.125px" font-weight="400">Cable</tspan></tspan></text>
+  <path d="m745.91 547.51v-13.868h-0.68138v13.868zm3.6474-12.505-4.0081-8.0162-4.0081 8.0162z" fill="#c00000" stroke="#c00000" stroke-linejoin="round" stroke-width=".040081px"/>
+  <path d="m320.13 150.4v79.761h-0.66134v-79.761zm-4.3488 1.3227 4.0081-8.0162 4.0081 8.0162zm8.0162 77.116-4.0081 8.0162-4.0081-8.0162z" stroke="#000" stroke-linejoin="round" stroke-width=".02004px"/>
+  <path d="m266.74 185.45c0-2.0642 1.6634-3.7275 3.7275-3.7275h99.1c2.0441 0 3.7075 1.6634 3.7075 3.7275v14.89c0 2.0642-1.6634 3.7275-3.7075 3.7275h-99.1c-2.0642 0-3.7275-1.6634-3.7275-3.7275z" fill="#fff" fill-rule="evenodd"/>
+ </g>
+ <path d="m266.74 185.45c0-2.0642 1.6634-3.7275 3.7275-3.7275h99.1c2.0441 0 3.7075 1.6634 3.7075 3.7275v14.89c0 2.0642-1.6634 3.7275-3.7075 3.7275h-99.1c-2.0642 0-3.7275-1.6634-3.7275-3.7275z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3427px"/>
+ <g>
+  <text x="293.45264" y="198.41844" fill="#000000" font-family="Consolas" font-size="16.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="293.45264" y="198.41844"><tspan dx="0" dy="0" fill="#000000" font-family="Consolas" font-size="16.062px" font-weight="400">socket</tspan></tspan></text>
+  <g stroke-linejoin="round">
+   <path d="m217.04 295.14v27.576h-0.66134v-27.576zm-4.3287 1.3227 4.0081-8.0162 4.0081 8.0162zm8.0162 24.93-4.0081 8.0162-4.0081-8.0162z" stroke="#000" stroke-width=".02004px"/>
+   <path d="m391.79 295.14v27.576h-0.66134v-27.576zm-4.3288 1.3227 4.0081-8.0162 4.0081 8.0162zm8.0162 24.93-4.0081 8.0162-4.0081-8.0162z" stroke="#000" stroke-width=".02004px"/>
+   <path d="m563.46 383.45v-328.26h93.268v1.3227h-92.587l0.64129-0.68138v327.62zm91.946-331.63 8.0162 4.0081-8.0162 4.0081z" fill="#228b22" stroke="#228b22" stroke-width=".040081px"/>
+  </g>
+ </g>
+ <g>
+  <path d="m474.68 383.45h89.461" fill="none" stroke="#228b22" stroke-miterlimit="8" stroke-width="1.3227px"/>
+  <path d="m522.58 361.13v-328.06h222.97" fill="none" stroke="#c00000" stroke-miterlimit="8" stroke-width="1.3227px"/>
+  <path d="m522.58 360.49h-43.969v1.3227h43.969zm-42.646-3.3668-8.0162 4.0081 8.0162 4.0081z" fill="#c00000" stroke="#c00000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width=".040081px"/>
+ </g>
+ <path d="m502.53 185.45c0-2.0441 1.6433-3.7275 3.7275-3.7275h74.43c2.0441 0 3.7275 1.6834 3.7275 3.7275v14.91c0 2.0441-1.6834 3.7275-3.7275 3.7275h-74.43c-2.0842 0-3.7275-1.6834-3.7275-3.7275z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m502.53 185.45c0-2.0441 1.6433-3.7275 3.7275-3.7275h74.43c2.0441 0 3.7275 1.6834 3.7275 3.7275v14.91c0 2.0441-1.6834 3.7275-3.7275 3.7275h-74.43c-2.0842 0-3.7275-1.6834-3.7275-3.7275z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3227px"/>
+ <text x="539.10999" y="198.41832" fill="#000000" font-family="Consolas" font-size="16.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="539.10999" y="198.41832"><tspan dx="0" dy="0" fill="#000000" font-family="Consolas" font-size="16.062px" font-weight="400">_</tspan></tspan></text>
+ <path d="m625.14 428.31v34.069h71.184v-34.069z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m625.14 428.31h71.184v34.069h-71.184z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3227px"/>
+ <text x="635.3927" y="454.2168" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="635.3927" y="454.2168"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">ADC</tspan></tspan></text>
+ <path d="m711.64 428.31v34.069h71.144v-34.069z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m711.64 428.31h71.144v34.069h-71.144z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3227px"/>
+ <text x="721.86707" y="454.2168" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="721.86707" y="454.2168"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">DAC</tspan></tspan></text>
+ <path d="m621.42 69.941v39.279h168.66v-39.279z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m621.42 69.941h168.66v39.279h-168.66z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3227px"/>
+ <text x="678.44629" y="98.460075" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="678.44629" y="98.460075"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">MAC</tspan></tspan></text>
+ <path d="m621.42 118.36v39.279h168.66v-39.279z" fill="#fff" fill-rule="evenodd"/>
+ <path d="m621.42 118.36h168.66v39.279h-168.66z" fill="none" stroke="#000" stroke-miterlimit="8" stroke-width="1.3227px"/>
+ <text x="681.81329" y="146.87512" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400" letter-spacing="0px" word-spacing="0px" style="line-height:125%" xml:space="preserve"><tspan x="681.81329" y="146.87512"><tspan dx="0" dy="0" fill="#000000" font-family="'Times New Roman'" font-size="24.062px" font-weight="400">PHY</tspan></tspan></text>
+</svg>
