@@ -1,3 +1,5 @@
+.. include:: ./var.rst 
+
 ==================================
 Project 3. To the Internet
 ==================================
@@ -14,7 +16,7 @@ Project 3. To the Internet
     
     4. Suggested workload is 4~8 FULL days. Manage your time.
     
-    5. Submit your code through Blackboard. The submission due date is **Dec. 17, 2023**.
+    5. Submit your code through Blackboard. The submission due date is |project3-due|.
     
     6. Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
     

@@ -1,3 +1,5 @@
+.. include:: ./var.rst 
+
 ==================================
 Project 4. Above IP
 ==================================
@@ -14,7 +16,7 @@ Project 4. Above IP
     
     4. Suggested workload is 2~6 FULL days. Manage your time.
     
-    5. Submit your code through Blackboard. The submission due date is **Jan. 22, 2024**.
+    5. Submit your code through Blackboard. The submission due date is |project4-due|.
     
     6. Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
     
@@ -61,7 +63,7 @@ DNS (Domain Name System, `RFC 882`_) associates user-friendly string names with 
 Task 2:  (1 points) HTTP
 ============================================================
 
-HTTP (Hypertext Transfer Protocol, ``RFC 1945``) defines a way to distribute text and multimedia information over the Internet. Implement a simplified TCP handshake and sliding window scheme on ``NODE1`` to allow it to visit public HTTP resources.
+HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text and multimedia information over the Internet. Implement a simplified TCP handshake and sliding window scheme on ``NODE1`` to allow it to visit public HTTP resources.
 
 .. _`RFC 1945`:
     https://datatracker.ietf.org/doc/html/rfc1945

@@ -1,6 +1,10 @@
+.. include:: ./var.rst 
+
 =====================================================================
-CS120 Computer Networks: Course Project Documentation, *Fall 2023*
+CS120 Computer Networks: Course Project Documentation, |semester|
 =====================================================================
+
+
 
 .. toctree::
    :maxdepth: 2
