@@ -1,3 +1,150 @@
-=============================
-Project 4. TODO
-=============================
+==================================
+Project 4. Above IP
+==================================
+
+.. Important::
+    
+    Please read the following instructions carefully:
+
+    1. This project is to be completed by each group individually.
+    
+    2. This project contains 6 tasks. 2 of them are optional (8 points + 2 points). 
+
+    3. The task score does not reflect the implementation difficulty but rather the recommended level.
+    
+    4. Suggested workload is 2~6 FULL days. Manage your time.
+    
+    5. Submit your code through Blackboard. The submission due date is **Jan. 22, 2024**.
+    
+    6. Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
+    
+    7. Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. 
+    
+    8. Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
+    
+    9. *Task 5, and 6* are graded by TAs.
+    
+    10. Tasks are graded according to their hierarchy. The hierarchy of this project is: *Task 1 < Task 5*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<"). 
+
+    11. Free to use any tools for debugging, but only the provided toolkit is permitted in performance assessment.
+
+    12. During the performance assessment, any task can only be attempted up to 5 times.
+
+Overview
+============================================================
+
+At this stage, we have built a basic yet functional network using audio signals. Above the IP layer lies a vast, rich, and open network realm. Before wrapping up the course project, adding some decorations to your piece can make it more appealing.
+
+.. _sec-project4-task1-dns:
+
+Task 1:  (4 points) DNS
+============================================================
+
+DNS (Domain Name System, `RFC 882`_) associates user-friendly string names with IP addresses. This task revisits :ref:`Project 3: Task 3 <sec-project3-task3-nat>`. Upgrade the NAT in ``NODE2`` to support TCP and UDP. Configure the local DNS server on ``NODE1`` to ``NODE2_3.IP`` (need to implement a local DNS server on ``NODE2``), 10.15.44.11, or 1.1.1.1, so that ``NODE1`` can resolve domain names.
+
+.. _`RFC 882`:
+    https://datatracker.ietf.org/doc/html/rfc882
+
+.. admonition:: Performance Assessment
+    
+    The setup is similar to :ref:`Project 3: Task 3 <sec-project3-task3-nat>`. The group provides ``NODE1`` and ``NODE2``, and connects them with the toolkit according to :numref:`Figure %s <fig-project2-net-2node>`. Connect ``NODE2`` to the campus LAN and disconnect ``NODE1`` from the campus LAN.
+
+    In the Aethernet program or the system terminal of ``NODE1``, enter the following content::
+
+        # NODE1
+        ping some-name-dot-com -i 1 -n 10
+    
+    TAs provide the domain name ``some-name-dot-com``. TAs check the reachability but do not count the RTT.
+
+.. _sec-project4-task2-http:
+
+Task 2:  (1 points) HTTP
+============================================================
+
+HTTP (Hypertext Transfer Protocol, ``RFC 1945``) defines a way to distribute text and multimedia information over the Internet. Implement a simplified TCP handshake and sliding window scheme on ``NODE1`` to allow it to visit public HTTP resources.
+
+.. _`RFC 1945`:
+    https://datatracker.ietf.org/doc/html/rfc1945
+
+.. tip::
+
+    - Thanks to those who host public HTTP servers for testing purposes: `example.com`_, `101.pku.edu.cn`_, `guozhivip.com`_.
+
+    - Developer tools of web browsers can be used to inspect the web content
+
+    - TCP tools, such as telnet_ and nping_, can be used to bypass TCP implementations when debugging. 
+
+.. _nping:
+    https://nmap.org/nping/
+
+.. _`telnet`:
+    https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/telnet
+
+.. _`example.com`:
+    http://www.example.com/
+
+.. _`101.pku.edu.cn`:
+    http://101.pku.edu.cn/courseDetails?id=DC7677E823157419E0555943CA7634DE
+
+.. _`guozhivip.com`:
+    http://guozhivip.com/eat/
+
+.. admonition:: Performance Assessment
+    
+    The setup is similar to :ref:`Project 3: Task 3 <sec-project3-task3-nat>`. The group provides ``NODE1`` and ``NODE2``, and connects them with the toolkit according to :numref:`Figure %s <fig-project2-net-2node>`. Connect ``NODE2`` to the campus LAN, and disconnect ``NODE1`` from the campus LAN.
+
+    In the Aethernet program or the system terminal of ``NODE1``, enter the following content and then display the returned HTML index page::
+
+        # NODE1
+        curl http://www.example.com
+    
+    TAs verify the returned HTML content.
+
+.. _sec-project4-task3-project-report:
+
+Task 3: (3 points) Project Report
+============================================================
+
+Please summarize your four course projects in a report (approximately 2000 words). Include your stories, designs, challenges, solutions, and any suggestions you may have for the course. The teaching team highly values your feedback and is continually working to improve the course. Submit the report through a separate link on Blackboard. Its deadline slightly later than the code submission deadline.
+
+.. _sec-project4-task4-relaunch:
+
+Part 4. (0 point) Relaunch
+============================================================
+
+Please return the borrowed toolkit to the TAs after completing this project. The toolkit is important to students in upcoming semesters, so please ensure it is in perfect condition. Returning the toolkit is a prerequisite for the TAs to upload the group's project grades.
+
+.. _sec-project4-task5-browsing-the-web:
+
+Part 5. (Optional, 1 point) Browsing the Web
+============================================================
+
+.. admonition:: Performance Assessment
+    
+    In :ref:`Task 2 <sec-project4-task2-http>`, use any web browser to open and render the web content, e.g.,::
+
+        # NODE1
+        start chrome www.example.com
+    
+    TAs verify the rendered HTML content.
+
+.. _sec-project4-task6-project-report:
+
+Part 6. (Optional, 1 point) Project Report #
+============================================================
+
+We will make the project report in :ref:`Task 3 <sec-project4-task3-project-report>` publicly available. Please explicitly add the following information below your report title so that we can comply with your preferences.
+
+    .. table:: 
+        :widths: 50, 50, 30
+        :align: right
+
+        +-------------------------------+---------------------------------+-------------------+
+        |          Subtitle             |  Disclosure  Preference         | Percentage Earned |
+        +===============================+=================================+===================+
+        | your name and/or affiliation  | disclose content with names     |              100% |
+        +-------------------------------+---------------------------------+-------------------+
+        |   "Anonymous Authors"         | anonymous disclosure            |               90% |
+        +-------------------------------+---------------------------------+-------------------+
+        |   blank or other content      | keep it offline                 |                0% |
+        +-------------------------------+---------------------------------+-------------------+

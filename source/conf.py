@@ -9,7 +9,7 @@
 project = 'CS120 Course Project'
 copyright = '2023, Zhice Yang'
 author = 'Zhice Yang'
-release = 'v0.70'
+release = 'v0.80'
 
 
 

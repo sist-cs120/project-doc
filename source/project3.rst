@@ -37,7 +37,7 @@ The first two projects built a local area network using audio signals. Allow me 
 
 IP plays a key role in the Internet, serving as the foundation for interconnecting networks. As depicted in :numref:`Figure %s <fig-project3-overview>`, network nodes with IP support can be categorized into two types. The router nodes, equipped with multiple network interfaces, are responsible for packet forwarding and interconnecting networks. The remaining network nodes, excluding routers, are termed as host nodes. 
 
-The following tasks will implement IP among Aetherent nodes. The optional tasks include implementing an Aethernet driver, which will provides a universal network interface to the operating system and applications.
+The following tasks will implement IP among Aethernet nodes. The optional tasks include implementing an Aethernet driver, which will provides a universal network interface to the operating system and applications.
 
 .. _fig-project3-overview:
 .. figure:: figures/project3-overview.*
@@ -59,7 +59,7 @@ Subsequent project tasks will frequently involve packet construction, sending, r
 
 In addition to IP, sockets also support TCP/UDP protocols. Sending and receiving IP packets of arbitrary content requires explicitly specifying the ``raw socket`` type. Due to some subtle issues of raw socket in, e.g., `winsock <winsock limitation_>`__, and `java <java raw socket limitation_>`__, we also recommend using a more universal but slightly more cumbersome low-level alternative: `libpcap`_. In :numref:`Figure %s <fig-project3-frame>`, libpcap can capture and manipulate the PHY layer payload at will.
 
-For guidance on utilizing libpcap, refer to the API documentation and code examples (`C <libpcap programming_>`__, `java <pcap4j_>`__). For debugging packet encapsulation and network protocols, Wireshark_ is an essential tool. It can capture and analyze the network traffic of the specified network interface.
+For guidance on utilizing libpcap, refer to the API documentation and code examples (`C <libpcap programming_>`__, `java <pcap4j_>`__, `npcap <npcap programming_>`__). For debugging packet encapsulation and network protocols, Wireshark_ is an essential tool. It can capture and analyze the network traffic of the specified network interface.
 
 .. _fig-project3-frame:
 .. figure:: figures/project3-frame.*
@@ -79,6 +79,9 @@ For guidance on utilizing libpcap, refer to the API documentation and code examp
 
 .. _`libpcap programming`:
     https://www.tcpdump.org/pcap.html
+
+.. _`npcap programming`:
+    https://npcap.com/guide/npcap-tutorial.html
 
 .. _pcap4j:
     https://github.com/kaitoy/pcap4j/
@@ -104,7 +107,7 @@ For guidance on utilizing libpcap, refer to the API documentation and code examp
 Task 1: (3 points) ICMP Echo
 ============================================================
 
-ICMP (Internet Control Message Protocol, `RFC 792`_) is an network control and diagnostic protocol. ICMP is encapsulated within IP datagrams, but it is generally considered as a part of IP. All IP hosts have to implement ICMP (`RFC 1122`_), and routers are required to support ICMP Echo.
+ICMP (Internet Control Message Protocol, `RFC 792`_) is an network control and diagnostic protocol. ICMP is encapsulated within IP datagram, but it is generally considered as a part of IP. All IP hosts have to implement ICMP (`RFC 1122`_), and routers are required to support ICMP Echo.
 
 ICMP Echo and Echo Reply messages are commonly used for testing network reachability and latency. An IP node receiving an ICMP Echo message must respond with an Echo Reply message. The Echo Reply message swaps the source and destination addresses of the Echo message while keeping the payload and ID (Identifier) fields unchanged. The ID field is utilized to pair Echo and Echo Reply messages. The built-in ``ping`` tool in operating systems is implemented based on ICMP Echo.
 
@@ -314,7 +317,7 @@ The traversal problem is to allow a local IP address to be addressed from extern
 
 - Based on :ref:`Task 3 <sec-project3-task3-nat>`, connect ``NODE4`` to the campus LAN and verify the reachability from ``NODE4`` to ``NODE2_2.IP``.
     
-- One possible approach for ICMP traversal is to use the payload field of ICMP Echo to index the local IP address. By default, the payload is filled with random or ordered chars, but it can be explicitly specified using ``$ ping -p`` (Linux only) or ``$ nping --data``.
+- One possible approach for ICMP traversal is to use the payload field of ICMP Echo to index the local IP address. By default, the payload is filled with random or ordered chars, but it can be explicitly specified using ``$ ping -p`` (Linux only) or other ping-like tools, e.g., nping_ ``$ nping --data``.
 
 - Enable ICMP Echo from ``NODE4`` to ``NODE3``.
 
@@ -385,7 +388,7 @@ The traversal problem is to allow a local IP address to be addressed from extern
 Task 5: (Optional, 1 point) IP Fragmentation
 ============================================================
 
-The MTU (maximum transmission unit) size of Aethernet is likely to be inconsistent with (smaller than) that of other networks. IP supports packet fragmentation and reassembling at the destination. This task uses longer ICMP messages to verify this feature.
+The MTU (Maximum Transmission Unit) size of Aethernet is likely to be inconsistent with (smaller than) that of other networks. IP supports packet fragmentation and reassembling at the destination. This task uses longer ICMP messages to verify this feature.
 
 .. tip::
 
@@ -482,7 +485,7 @@ Use Aethernet interface to complete :ref:`Task 2 <sec-project3-task2-router>`.
 
 .. admonition:: Performance Assessment
     
-    Assessment criteria and procedures are the same as in :ref:`Task 2 <sec-project3-task2-router>`. Additionally, TAs use Wireshark to capture the Aetherent Interface to check if it receives ICMP Echo messages from ``NODE3``.
+    Assessment criteria and procedures are the same as in :ref:`Task 2 <sec-project3-task2-router>`. Additionally, TAs use Wireshark to capture the Aethernet Interface to check if it receives ICMP Echo messages from ``NODE3``.
 
 .. _sec-project3-task9-nat-#:
 
@@ -502,7 +505,7 @@ Use Aethernet interface to complete :ref:`Task 3 <sec-project3-task3-nat>`.
 
 .. _sec-project3-task10-arp:
 
-Task 10: (Optional, 1 points) ARP
+Task 10: (Optional, 1 point) ARP
 ============================================================
 
 ARP (Address Resolution Protocol, `RFC 826`_) allow auto-binding of IP addresses and MAC addresses. Use Aethernet interface to complete :ref:`Task 1 <sec-project3-task1-icmp-echo>` without writing static ARP entries.
