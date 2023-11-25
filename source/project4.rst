@@ -95,12 +95,19 @@ HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text
     
     The setup is similar to :ref:`Project 3: Task 3 <sec-project3-task3-nat>`. The group provides ``NODE1`` and ``NODE2``, and connects them with the toolkit according to :numref:`Figure %s <fig-project2-net-2node>`. Connect ``NODE2`` to the campus LAN, and disconnect ``NODE1`` from the campus LAN.
 
-    In the Aethernet program or the system terminal of ``NODE1``, enter the following content and then display the returned HTML index page::
+    The group specifies the initial sequence numbers the TCP connections of ``NODE1`` from the set: 0x :math:`H_1 H_2 H_3 H_4 H_5 H_6 H_7 H_8`, where, :math:`H_i \in \{1,2,3,4,5,6,7,8\}` and :math:`H_i \ne H_j`, e.g., 0x1234 5678, 0x8765 4321, 0x4321 8765.
+
+
+    In the Aethernet program or the system terminal of ``NODE1``, enter the following or equivalent content::
 
         # NODE1
         curl http://www.example.com
     
-    TAs verify the returned HTML content.
+    `curl`_ fetches the HTML page of the requested URL via HTTP.
+    TAs verify the returned HTML content. TAs verify the specified sequence number of the TCP SYN segment from ``NODE1`` through Wireshark on ``NODE2``.
+
+.. _`curl`:
+    https://curl.se/
 
 .. _sec-project4-task3-project-report:
 
@@ -144,7 +151,7 @@ We will make the project report in :ref:`Task 3 <sec-project4-task3-project-repo
         +-------------------------------+---------------------------------+-------------------+
         |          Subtitle             |  Disclosure  Preference         | Percentage Earned |
         +===============================+=================================+===================+
-        | your name and/or affiliation  | disclose content with names     |              100% |
+        | your name (and affiliation)   | disclose content with names     |              100% |
         +-------------------------------+---------------------------------+-------------------+
         |   "Anonymous Authors"         | anonymous disclosure            |               90% |
         +-------------------------------+---------------------------------+-------------------+

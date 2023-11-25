@@ -193,9 +193,9 @@ This task will enhance the network functionalities of ``NODE2``, providing it wi
 
 - Implement proper forwarding logic on ``NODE2``:
     
-    If the destination IP address of the datagram belongs to the directly connected networks, forward it to the corresponding port.
+    + If the destination IP address of the datagram belongs to the directly connected networks, forward it to the corresponding port.
     
-    Otherwise, discard it.
+    + Otherwise, discard it.
 
 - Enable ICMP Echo from ``NODE3`` to ``NODE1``.
 
@@ -247,13 +247,13 @@ This task will implement an ICMP-compatible NAT on ``NODE2`` to allow ICMP Echos
 
 - Implement NAT on ``NODE2``. While ICMP does not have port fields like TCP/UDP, its ID field can serve the same purpose. Specifically, ``NODE2`` should record the IDs of ICMP Echo messages. Upon receiving the ICMP Echo Reply messages, use their IDs to determine the forwarding actions:
 
-    If the destination IP address of the datagram belongs to the directly connected networks, forward it to the corresponding port.
+    + If the destination IP address of the datagram belongs to the directly connected networks, forward it to the corresponding port.
 
-    If the destination IP address of the datagram is ``NODE2_2.IP``, modify the destination IP address according to the NAT table, and forward it to the corresponding port.
+    + If the destination IP address of the datagram is ``NODE2_2.IP``, modify the destination IP address according to the NAT table, and forward it to the corresponding port.
 
-    If the destination IP address of the datagram does not belong to the directly connected networks, modify its source IP address to ``NODE2_2.IP`` and forward it to the default router connected to port ``NODE2_2``.
+    + If the destination IP address of the datagram does not belong to the directly connected networks, modify its source IP address to ``NODE2_2.IP`` and forward it to the default router connected to port ``NODE2_2``.
 
-        If the datagram is an ICMP Echo message, add its ICMP ID and the source IP address to the NAT table.
+        * If the datagram is an ICMP Echo message, add its ICMP ID and the source IP address to the NAT table.
 
 - Analyze ICMP Echo messages from ``NODE3`` to 1.1.1.1.
 
@@ -458,6 +458,10 @@ Redirecting the traffic of these virtual drivers to/from the Aethernet program e
 .. _Microsoft loopback adapter:
     https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/install-microsoft-loopback-adapter
 
+.. tip::
+
+    - Deselect unnecessary protocol suites in the virtual network device to reduce background traffic. 
+
 .. admonition:: Performance Assessment
     
     The group provides two devices: ``NODE1`` and ``NODE2``. They are connected through the campus LAN. Use socket and the crafted Aethernet Interface to send an IPv4 packet from ``NODE1`` to ``NODE2``, and capture the packet on ``NODE2`` using Wireshark. Please complete this part on your own.
@@ -544,7 +548,7 @@ Every group has independently crafted a network known as Aethernet. While these 
     
     Each group provides two devices: ``NODE1*`` and ``NODE2*``, and connects them with Aethernet. One group provides ``NODE5``. All groups connect their ``NODE2*`` devices to the hotspot of ``NODE5``.
 
-    In the system terminal of ``NODE1*``, enter the following content::
+    In the system terminal of ``NODE1*``, enter the following content without using ``[group-specified options]``::
 
         # NODE1x
         ping NODE1y.IP -i 1 -n 1000
