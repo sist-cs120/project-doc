@@ -154,11 +154,9 @@ This task will enable IP packets sent by ``NODE1`` to reach ``NODE2``:
     In the Aethernet program of ``NODE1``, enter the following content::
     
         #NODE1
-        (Aethernet program) ping NODE2_3.IP -i 1 -n 10
-    
-    -i specifies the time interval (in seconds) between ICMP Echos.
+        (Aethernet program) ping NODE2_3.IP -n 10
 
-    -n specifies the number of ICMP Echos.
+    -n (Windows) or -c (Linux) specifies the number of ICMP Echos.
 
     The output format should resemble typical ``ping`` tools and should include the IP addresses of the ICMP peers and the Round-Trip Time (RTT) measured by ICMP Echo and Echo Reply. TAs record the average of the three minimum RTTs as RTT_12.
         
@@ -214,7 +212,7 @@ This task will enhance the network functionalities of ``NODE2``, providing it wi
     In ``NODE3``'s system terminal or ping app, enter the following (or equivalent) content::
 
         # NODE3
-        ping NODE1.IP -i 1 -n 10
+        ping NODE1.IP -n 10
     
     TAs record the average of the three minimum RTTs as RTT_13.
 
@@ -271,12 +269,12 @@ This task will implement an ICMP-compatible NAT on ``NODE2`` to allow ICMP Echos
     In ``NODE3``'s system terminal or ``ping`` app, enter the following (or equivalent) content::
 
         # NODE3 
-        ping 1.1.1.1 -i 1 -n 1000
+        ping 1.1.1.1 -n 1000
 
     then, in the Aethernet program of ``NODE1``, enter the following content::
 
         # NODE1
-        (Aethernet program) ping 1.1.1.1 -i 1 -n 10
+        (Aethernet program) ping 1.1.1.1 -n 10
 
     TAs record the average of the three minimum RTTs as RTT_3S and RTT_1S, correspondingly.
 
@@ -296,7 +294,7 @@ This task will implement an ICMP-compatible NAT on ``NODE2`` to allow ICMP Echos
             |         >400 ms |                0% |
             +-----------------+-------------------+
 
-        At the same time, RTT_3S must be within 100 ms:
+        At the same time, RTT_3S must be within 300 ms:
         
         .. table:: 
             :widths: 30, 30
@@ -305,9 +303,9 @@ This task will implement an ICMP-compatible NAT on ``NODE2`` to allow ICMP Echos
             +-----------------+-------------------+
             |          RTT_3S | Percentage Earned |
             +=================+===================+
-            |         <100 ms |              100% |
+            |         <300 ms |              100% |
             +-----------------+-------------------+
-            |         >100 ms |                0% |
+            |         >300 ms |                0% |
             +-----------------+-------------------+
 
 .. _sec-project3-task4-nat-traversal:
@@ -344,14 +342,14 @@ The traversal problem is to allow a local IP address to be addressed from extern
     In ``NODE4``'s system terminal, enter the following content to address ``NODE3``::
 
         # NODE4
-        ping NODE2_2.IP -i 1 -n 1000 [group-specified options]
+        ping NODE2_2.IP -n 1000 [group-specified options]
 
     TAs record the average of the three minimum RTTs as RTT_43.
 
     In another ``NODE4``'s system terminal, enter the following content to address ``NODE1``::
 
         # NODE4
-        ping NODE2_2.IP -i 1 -n 10 [group-specified options]
+        ping NODE2_2.IP -n 10 [group-specified options]
 
     TAs record the average of the three minimum RTTs as RTT_41.
 
@@ -408,7 +406,7 @@ The MTU (Maximum Transmission Unit) size of Aethernet is likely to be inconsiste
     In ``NODE4``'s system terminal, enter the following content to address ``NODE1``::
 
         # NODE4
-        ping NODE2_2.IP -i 1 -n 10 -l 200 [group-specified options]
+        ping NODE2_2.IP -n 10 -l 200 [group-specified options]
 
     -l specifies the size of the ICMP Echo payload (in bytes). 200 is an estimated value. The group can explicitly inform TAs about their Aethernet MTU size. TAs should choose a payload size that is at least 3 times the informed MTU size. This size should also be smaller than the Ethernet MTU of 1500 bytes. This is because if the ICMP Echo from ``NODE4`` is already fragmented before reaching ``NODE2``, it will complicate the NAT implementation.
 
@@ -480,7 +478,7 @@ Use Aethernet interface to complete :ref:`Task 1 <sec-project3-task1-icmp-echo>`
     In the system terminal of ``NODE1``, enter the following content::
 
         # NODE1
-        ping NODE2_3.IP -i 1 -n 10
+        ping NODE2_3.IP -n 10
 
 .. _sec-project3-task8-router-#:
 
@@ -507,7 +505,7 @@ Use Aethernet interface to complete :ref:`Task 3 <sec-project3-task3-nat>`.
     In the system terminal of ``NODE1``, enter the following content::
 
         # NODE1
-        ping 1.1.1.1 -i 1 -n 10
+        ping 1.1.1.1 -n 10
 
 .. _sec-project3-task10-arp:
 
@@ -526,7 +524,7 @@ ARP (Address Resolution Protocol, `RFC 826`_) allow auto-binding of IP addresses
     In the system terminal of ``NODE1``, enter the following content::
 
         # NODE1
-        ping ANY_IP_OF_THEIR_SUBNET -i 1 -n 10
+        ping ANY_IP_OF_THEIR_SUBNET -n 10
 
     Use Wireshark to monitor ARP frames flowing in ``NODE1``'s Aethernet Interface.
 
@@ -551,7 +549,7 @@ Every group has independently crafted a network known as Aethernet. While these 
     In the system terminal of ``NODE1*``, enter the following content without using ``[group-specified options]``::
 
         # NODE1x
-        ping NODE1y.IP -i 1 -n 1000
+        ping NODE1y.IP -n 1000
 
     where x and y are the IDs of the participating groups. 
 

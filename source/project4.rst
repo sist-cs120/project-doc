@@ -54,7 +54,7 @@ DNS (Domain Name System, `RFC 882`_) associates user-friendly string names with 
     In the Aethernet program or the system terminal of ``NODE1``, enter the following content::
 
         # NODE1
-        ping some-name-dot-com -i 1 -n 10
+        ping some-name-dot-com -n 10
     
     TAs provide the domain name ``some-name-dot-com``. TAs check the reachability but do not count the RTT.
 
