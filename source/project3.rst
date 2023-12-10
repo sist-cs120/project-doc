@@ -278,20 +278,20 @@ This task will implement an ICMP-compatible NAT on ``NODE2`` to allow ICMP Echos
 
     TAs record the average of the three minimum RTTs as RTT_3S and RTT_1S, correspondingly.
 
-        RTT_1S must be within 400 ms:
+        RTT_1S - RTT_3S  must be within 300 ms:
         
         .. table:: 
             :widths: 30, 30
             :align: right
 
             +-----------------+-------------------+
-            |          RTT_1S | Percentage Earned |
+            |  RTT_1S-RTT_3S  | Percentage Earned |
             +=================+===================+
-            |         <300 ms |              100% |
+            |         <200 ms |              100% |
             +-----------------+-------------------+
-            |         <400 ms |               80% |
+            |         <300 ms |               80% |
             +-----------------+-------------------+
-            |         >400 ms |                0% |
+            |         >300 ms |                0% |
             +-----------------+-------------------+
 
         At the same time, RTT_3S must be within 300 ms:
