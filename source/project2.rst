@@ -1,3 +1,5 @@
+.. include:: ./var.rst 
+
 ==================================
 Project 2. Manage Multiple Access
 ==================================
@@ -6,35 +8,37 @@ Project 2. Manage Multiple Access
     
     Please read the following instructions carefully:
 
-    - This project is to be completed by each group individually.
+    1. This project is to be completed by each group individually.
     
-    - This project contains 7 tasks. 2 of them are optional (12 points + 6 points). 
+    2. This project contains 7 tasks. 2 of them are optional (12 points + 6 points). 
 
-    - The task score does not reflect the implementation difficulty but rather the recommended level.
+    3. The task score does not reflect the implementation difficulty but rather the recommended level.
     
-    - Suggested workload is 6~8 FULL days. Manage your time.
+    4. Suggested workload is 6~8 FULL days. Manage your time.
     
-    - Submit your code through Blackboard. The submission due date is **Nov. 19, 2023**.
+    5. Submit your code through Blackboard. The submission due date is |project2-due|.
     
-    - Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
+    6. Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
     
-    - Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. 
+    7. Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. 
     
-    - Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
+    8. Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
     
-    - *Task 5 and 6* are graded by TAs.
+    9. *Task 5 and 6* are graded by TAs.
     
-    - Tasks are graded according to their hierarchy. The hierarchy of this project is *Task 1 < Task 2 < Task 3 < Task 6*, and *Task 1 < Task 2 < Task 3 < Task 4*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<"). 
+    10. Tasks are graded according to their hierarchy. The hierarchy of this project is *Task 1 < Task 2 < Task 3 < Task 6*, and *Task 1 < Task 2 < Task 3 < Task 4*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<"). 
 
-    - Free to use any tools for debugging, but only the provided toolkit is permitted in performance assessment.
+    11. Free to use any tools for debugging, but only the provided toolkit is permitted in performance assessment.
+
+    12. During the performance assessment, any task can only be attempted up to 5 times.
 
 
 Overview
 ============================================================
 
-This project aims to enable multiple devices to share the audio medium for relatively reliable data transmission, building upon the results of :doc:`Project 1 <project1>`. To simplify the physical layer implementation, network devices will no longer be connected through sound but via audio cables. These cables carry analog electrical signals driving the loudspeakers, acting as an 'electromagnetic mirror' of the actual sound. It is worth noting that such wired connections are similar to Ethernet, making the `CSMA/CD`_ mechanism an good reference for this project.
+This project aims to enable multiple devices to share the audio medium for relatively reliable data transmission, building upon the results of :doc:`Project 1 <project1>`. To simplify the physical layer implementation, network devices will no longer be connected through sound but via audio cables. These cables carry analog electrical signals driving the loudspeakers, acting as an "electromagnetic mirror" of the actual sound. It is worth noting that such wired connections are similar to Ethernet, making the `CSMA/CD`_ mechanism an good reference for this project.
 
-However, unlike Ethernet, there is a significant latency (~20 ms) when using the sound card for carrier sensing. This latency arises because the sound card is not designed for this purpose, and we have to process carrier information in the digital domain. This delay reduces the efficiency of CSMA and, more importantly, prevents the implementation of an effective collision detection mechanism. Therefore, we will use ACK to handle error frames. In this sense, the access mechanism is more akin to what is adopted in wireless situations like Wi-Fi. :numref:`Figure %s <fig-project2-overview>` illustrates the program architecture of this project.
+However, unlike Ethernet, there is a significant latency (~10 ms) when using the sound card for carrier sensing. This latency arises because the sound card is not designed for this purpose, and we have to process carrier information in the digital domain. This delay reduces the efficiency of CSMA and, more importantly, prevents the implementation of an effective collision detection mechanism. Therefore, we will use ACK to handle error frames. In this sense, the access mechanism is more akin to what is adopted in wireless situations like Wi-Fi. :numref:`Figure %s <fig-project2-overview>` illustrates the program architecture of this project.
 
 .. _fig-project2-overview:
 .. figure:: figures/project2-overview.*
@@ -45,41 +49,6 @@ However, unlike Ethernet, there is a significant latency (~20 ms) when using the
 
 .. _CSMA/CD:
     https://en.wikipedia.org/wiki/Carrier-sense_multiple_access_with_collision_detection
-
-
-Task 0: (0 point) Audio Toolkit
-============================================================
-
-Computers connect to audio peripherals through the audio connectors of the sound card. The typical use case involves inserting the 3.5 mm plug (M) of the microphone and/or speaker into the 3.5 mm jack (F) of the sound card. The project will use 3.5 mm audio cables to connect computers starting from this task. Due to the confusing structures of 3.5 mm `audio connectors`_ and diverse specifications of sound cards, we will provide the following toolkit. Please borrow it from TAs.
-
-- `USB Sound Card`_ ×4
-    This device includes 1 audio input connector (Red F), 1 audio output connector (Green F), and a USB type-A connector. When connected to the computer via USB, it will be recognized as a sound card. Its audio input/output can be read/generated, e.g., through ASIO. Note that while its connectors are all stereo, it only supports mono recording.
-
-- Mixer_ ×1
-    This device contains 4 input connectors (F) and 1 output connector (F). Its function is to combine the signals from 4 inputs and output them to the output connector. The strength of each input/output signal can be adjusted by knobs. All gain knobs must be turned fully maximized during performance assessment.
-
-- `Audio Cable`_ ×6
-    (M to M) audio cables, with lengths of 1.0 m or 0.5 m.
-
-- `1-to-2 Cable Splitter`_ ×3
-    This splitter has three internally-connected connectors (M, F, F). The input signal from any connector is split into the other two connectors, and the input signals from any two connectors are combined into a signal output to the remaining.
-
-The above toolkit will be used to complete all the remaining projects. Additional cables can be requested for specific tasks, and replacements can be requested in case of suspected hardware issues.
-
-.. _audio connectors:
-    https://en.wikipedia.org/wiki/Phone_connector_(audio)
-
-.. _USB Sound Card:
-    https://item.jd.com/1804882.html
-
-.. _Mixer:
-    https://item.taobao.com/item.htm?id=684967263189
-
-.. _Audio Cable:
-    https://item.jd.com/1192674.html
-
-.. _1-to-2 Cable Splitter:
-    https://item.jd.com/2781355.html 
 
 Task 1: (4 points) Cable Connection
 ============================================================
@@ -107,6 +76,8 @@ This task revisits :ref:`Project1.Task3 <project1-task3>`. While there are equiv
 
     - It is recommended to unplug the power adapters of your computers when connecting them. The reason is that different AC-to-DC adapters, especially those without grounding, may cause non-zero voltages in the device's "ground". In some cases, this issue can lead to biased DC levels in the received signals. Occasionally, it may even cause permanent damages. Be very careful if you have to connect two devices with different "ground", such as a charging laptop and a desktop computer.
 
+    - Signals in the cables may be susceptible to electromagnetic interference from other electronic devices or even adjacent cables. Please maintain a tidy testing environment and keep the cables away from potential high-powered electromagnetic devices, e.g., power adapters.
+    
 .. admonition:: Performance Assessment
     
     The group provides two devices: ``NODE1`` and ``NODE2``, and connects them with the toolkit according to :numref:`Figure %s <fig-project2-net-2node>` (the mixer's connecter IDs are interchangeable).  
@@ -180,7 +151,7 @@ Specifically,
 
   If it is a ``DATA`` frame, the received content is appended to the reception buffer. The MAC thread reports to the upper-layer, and sends an ``ACK`` frame immediately.
 
-In the above protocol, it is important for the receiver to be able to distinguish between ``DATA`` frames and ``ACK`` frames. This is because, although ``ACK`` frames are sent by the receiver itself, due to driver delays (approximately 30~40 ms round-trip time), the sender might receive its own ``ACK`` while it is in the idle state. Therefore, the protocol requires adding auxiliary information to the frames, i.e., the MAC layer header. For example, in :numref:`Figure %s <fig-project2-frame>`, the ``Type`` field can be used to incorporate a flag to differentiate between ``ACK`` and ``DATA``. Note that the aforementioned issue can also be resolved by specifying the receiver ID, i.e., the MAC address, in the frames. MAC addresses provide other essential functionalities, which will become apparent in the subsequent tasks.
+In the above protocol, it is important for the receiver to be able to distinguish between ``DATA`` frames and ``ACK`` frames. This is because, although ``ACK`` frames are sent by the receiver itself, due to driver delays (typical round-trip time for a USB sound card using ASIO with 128 buffer size is 15 to 20 ms), the sender might receive its own ``ACK`` while it is in the idle state. Therefore, the protocol requires adding auxiliary information to the frames, i.e., the MAC layer header. For example, in :numref:`Figure %s <fig-project2-frame>`, the ``Type`` field can be used to incorporate a flag to differentiate between ``ACK`` and ``DATA``. Note that the aforementioned issue can also be resolved by specifying the receiver ID, i.e., the MAC address, in the frames. MAC addresses provide other essential functionalities, which will become apparent in the subsequent tasks.
 
 .. _fig-project2-frame:
 .. figure:: figures/project2-frame.*
@@ -386,7 +357,7 @@ A primary design objective of network systems is to enhance data transmission pe
 
 .. admonition:: Performance Assessment
     
-    This task is automatically graded according to the completion time of Task 4.
+    This task is automatically graded according to the completion time of Task 4. When determining ranks, round the completion time to the nearest 5 seconds, e.g., 23.4 seconds and 20.1 seconds would be considered the same rank.
 
         .. table:: 
             :widths: 30, 30
@@ -397,9 +368,9 @@ A primary design objective of network systems is to enhance data transmission pe
             +=================+==================+
             |              1st|              100%|
             +-----------------+------------------+
-            |              2nd|               33%|
+            |              2nd|               66%|
             +-----------------+------------------+
-            |              3rd|                0%|
+            |              3rd|               33%|
             +-----------------+------------------+
 
 Task 6: (Optional, 3 points) X 

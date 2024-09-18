@@ -16,4 +16,5 @@ CS120 Computer Networks: Course Project Documentation, |semester|
    ./project2.rst
    ./project3.rst
    ./project4.rst
+   ./report.rst
 

@@ -1,3 +1,5 @@
+.. include:: ./var.rst 
+
 ==================================
 Project 1. Acoustic Link
 ==================================
@@ -6,25 +8,27 @@ Project 1. Acoustic Link
     
     Please read the following instructions carefully:
 
-    - This project is to be completed by each group individually.
+    1. This project is to be completed by each group individually.
     
-    - This project contains 8 tasks. 5 of them are optional (10 points + 10 points). 
+    2. This project contains 8 tasks. 5 of them are optional (10 points + 8 points). 
 
-    - The task score does not reflect the implementation difficulty but rather the recommended level.
+    3. The task score does not reflect the implementation difficulty but rather the recommended level.
     
-    - Suggested workload is 4~6 FULL days. Manage your time.
+    4. Suggested workload is 4~6 FULL days. Manage your time.
     
-    - Submit your code through Blackboard. The submission due date is **Oct. 29, 2023**.
+    5. Submit your code through Blackboard. The submission due date is |project1-due|.
     
-    - Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
+    6. Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
     
-    - Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. 
+    7. Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. 
     
-    - Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
+    8. Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
     
-    - *Task 8* is graded by TAs.
+    9. *Task4* and *Task 8* are graded by TAs.
     
-    - Tasks are graded according to their hierarchy. The hierarchy of this project is *Task 1 < Task 2 < Task 3*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<").  
+    10. Tasks are graded according to their hierarchy. The hierarchy of this project is *Task 1 < Task 2 < Task 3*. A full score of one task automatically guarantees the full score of non-overdue preceding tasks (left side of "<").  
+
+    11. During the performance assessment, any task can only be attempted up to 5 times.
 
 Overview
 ============================================================
@@ -38,10 +42,44 @@ Overview
 
     Project 1 Overview.
 
+Task 0: (0 point) Audio Toolkit
+============================================================
+
+Computers connect to audio peripherals through the audio connectors of the sound card. The typical use case involves inserting the 3.5 mm plug (M) of the microphone and/or speaker into the 3.5 mm jack (F) of the sound card. Due to the confusing structures of 3.5 mm `audio connectors`_ and diverse specifications of sound cards, we will provide the following toolkit. Please borrow it from TAs. 
+
+- `USB Sound Card`_ ×4
+    This device includes 1 audio input connector (Red F), 1 audio output connector (Green F), and a USB type-A connector. When connected to the computer via USB, it will be recognized as a sound card. Its audio input/output can be read/generated, e.g., through ASIO. Note that while its connectors are all stereo, it only supports mono recording.
+
+- Mixer_ ×1
+    This device contains 4 input connectors (F) and 1 output connector (F). Its function is to combine the signals from 4 inputs and output them to the output connector. The strength of each input/output signal can be adjusted by knobs. All gain knobs must be turned fully maximized during performance assessment.
+
+- `Audio Cable`_ ×6
+    (M to M) audio cables, with lengths of 1.0 m or 0.5 m.
+
+- `1-to-2 Cable Splitter`_ ×3
+    This splitter has three internally-connected connectors (M, F, F). The input signal from any connector is split into the other two connectors, and the input signals from any two connectors are combined into a signal output to the remaining.
+
+It is important to note that you can use 3.5 mm audio cables to connect computers only starting from :doc:`Project 2 <project2>`. However, in :doc:`Project 1 <project1>`, you can optionally use the sound card included in the kit. Additional cables can be requested for specific tasks, and replacements can be requested in case of suspected hardware issues.
+
+.. _audio connectors:
+    https://en.wikipedia.org/wiki/Phone_connector_(audio)
+
+.. _USB Sound Card:
+    https://item.jd.com/1804882.html
+
+.. _Mixer:
+    https://item.taobao.com/item.htm?id=684967263189
+
+.. _Audio Cable:
+    https://item.jd.com/1192674.html
+
+.. _1-to-2 Cable Splitter:
+    https://item.jd.com/2781355.html 
+
 Task 1: (3 points) Understanding Your Tools 
 ============================================================
 
-:ref:`Go back to Project 0 <project0-task2>`. This task title is reserved here for task hierarchy. If this part is not submitted by the Project 0 deadline, this part will not be graded and counted.
+:ref:`Go back to Project 0 <project0-task2>`. This task title is reserved here for task hierarchy. If this task is not submitted by the Project 0 deadline, this task will not be graded and counted.
 
 Task 2: (2 points) Generating Sound Waves at Will
 ============================================================
@@ -141,6 +179,10 @@ If the signal :math:`f(t)` generated by the Tx node is audible at the Rx node, :
 
     - If you notice occasional buffer underruns in the sound card, causing the loss of some samples during playing or recording, it might be due to delayed scheduling of the sound card driver. To enhance the real-time performance, switch your computer's power management to the ``performance mode`` to disable CPU power-saving features [atc21]_.
 
+    - Successive volume might lead to more noise.
+
+    - The quality of microphone and loudspeaker can significantly affect the performance. 
+
 .. admonition:: Performance Assessment
     
     The group provides two devices: ``NODE1`` and ``NODE2``
@@ -207,7 +249,7 @@ Errors are nearly inevitable in network transmissions. When the Bit Error Rate (
 .. _FEC:
     https://en.wikipedia.org/wiki/Error_correction_code
     
-Task 5: (Optional, 2 points) Higher Bandwidth
+Task 5: (Optional, 2 points) OFDM
 ============================================================
 
 When attempting to further increase the bandwidth of the audio channel, one approach is to raise the baud rate, i.e., reducing the symbol duration. However, several factors impose limits on symbol duration. As mentioned `earlier <ring-effect_>`__, due to constraints in transducer components, instantaneous switching between symbols is not possible. Adequate transition intervals need to be reserved. Additionally, the slow propagation speed of sound introduces obvious interference between symbols due to multipath copies (similar to echoes). Another choice is to increase the number of simultaneous carriers. However, as stated earlier, interference can occur among nearby carriers. 
@@ -291,11 +333,10 @@ For this task, please prepare two microphones for the Rx node and two speakers f
 .. _WARP:
     https://warpproject.org/trac/wiki/WARPLab/Examples/MIMO_OFDM
 
-Task 8: (Optional, 4 points) Range Challenge
+Task 8: (Optional, 2 points) Range Challenge
 ============================================================
 
 After propagating over longer distances, sound waves exhibit richer and more complex characteristics, such as multipath_ effects, making data transmission more challenging. This task is aimed at encouraging groups achieving longer transmission distances.
-
 
 .. admonition:: Performance Assessment
 

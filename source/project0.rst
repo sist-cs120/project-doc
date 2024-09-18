@@ -1,3 +1,4 @@
+.. include:: ./var.rst 
 
 ==================================
 Project 0. Warm Up
@@ -7,13 +8,15 @@ Project 0. Warm Up
     
     Please read the following instructions carefully:
 
-    - This project is to be completed by each group individually.
+    1. This project is to be completed by each group individually.
     
-    - This project contains 2 tasks (3 points). 
+    2. This project contains 2 tasks (3 points). 
     
-    - Submit your code through Blackboard. The submission due date is **Oct. 6, 2023**.
+    3. Submit your code through Blackboard. The submission due date is |project0-due|.
     
-    - Each group needs to submit the code once and only once. This project is to be checked together with :doc:`Project 1 <project1>`.
+    4. Each group needs to submit the code once and only once. This project is to be checked together with :doc:`Project 1 <project1>`.
+
+    5. During the performance assessment, any task can only be attempted up to 5 times.
 
 Overview 
 ===========================
@@ -50,6 +53,7 @@ We will build a functional computer network from scratch through the four course
 
 .. _Ethernet: 
     https://en.wikipedia.org/wiki/Ethernet
+
 .. _Wi-Fi: 
     https://en.wikipedia.org/wiki/Wi-Fi
 
@@ -57,6 +61,7 @@ A sound card can convert audio signals between digital and analog (physical) for
 
 .. _DAC:
     https://en.wikipedia.org/wiki/Digital-to-analog_converter
+
 .. _ADC:
     https://en.wikipedia.org/wiki/Analog-to-digital_converter
 
@@ -68,10 +73,13 @@ Therefore, we recommend using ASIO_ (Audio Stream Input/Output) to talk with the
 
 .. _ASIO: 
     https://manual.audacityteam.org/man/asio_audio_interface.html
+
 .. _WindowsAudio:
     https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/windows-audio-architecture
+
 .. _DirectSound:
     https://learn.microsoft.com/en-us/previous-versions/windows/desktop/bb318665(v=vs.85)
+
 .. _ALSA:
     https://www.alsa-project.org/wiki/Main_Page
 
@@ -79,8 +87,10 @@ ASIO has several driver implementations. ASIO4ALL_ working in Windows is verifie
 
 .. _ASIO Steps:
     https://github.com/sist-cs120/project-wiki/wiki
+
 .. _ASIO4ALL:
     https://asio4all.org/
+    
 .. _WineASIO:
     https://github.com/wineasio/wineasio
 
