@@ -8,7 +8,7 @@ Project 0. Warm Up
     
     Please read the following instructions carefully:
 
-    1. This project is to be completed by each group individually.
+    1. This project is to be completed by each group individually. Use your own code to complete the main parts of the tasks. 
     
     2. This project contains 2 tasks (3 points). 
     

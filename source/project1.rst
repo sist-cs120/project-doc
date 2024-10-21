@@ -8,7 +8,7 @@ Project 1. Acoustic Link
     
     Please read the following instructions carefully:
 
-    1. This project is to be completed by each group individually.
+    1. This project is to be completed by each group individually. Use your own code to complete the main parts of the tasks. 
     
     2. This project contains 8 tasks. 5 of them are optional (10 points + 8 points). 
 
@@ -20,7 +20,7 @@ Project 1. Acoustic Link
     
     6. Each group needs to submit the code once and only once. Immediately after TAs' checking. The submission is performed by one of the group members. 
     
-    7. Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. 
+    7. Tasks with "Optional" tag are optional tasks. Their due date is the end of the semester. Optional tasks are graded based on performance criteria and the results of the code review.
     
     8. Unless otherwise mentioned, the instructor is responsible for grading optional tasks. Contact the instructor to check if you have finished one or more of them. 
     
