@@ -44,8 +44,6 @@ Task 1:  (4 points) DNS
 
 DNS (Domain Name System, `RFC 882`_) associates user-friendly string names with IP addresses. This task revisits :ref:`Project 3: Task 3 <sec-project3-task3-nat>`. Upgrade the NAT in ``NODE2`` to support TCP and UDP. Configure the local DNS server on ``NODE1`` to ``NODE2_3.IP`` (need to implement a local DNS server on ``NODE2``), 10.15.44.11, or 1.1.1.1, so that ``NODE1`` can resolve domain names.
 
-TODO: monitor local DNS server with Wireshark 
-
 .. _`RFC 882`:
     https://datatracker.ietf.org/doc/html/rfc882
 
@@ -58,15 +56,16 @@ TODO: monitor local DNS server with Wireshark
         # NODE1
         ping some-name-dot-com -n 10
     
-    TAs provide the domain name ``some-name-dot-com``. TAs check the reachability but do not count the RTT.
+    - Objective 1 (1 point). TAs provide the domain name ``some-name-dot-com``. TAs check the reachability but do not count the RTT. 
+
+    - Objective 2 (3 points). TAs use Wireshark on ``NODE2`` to monitor the DNS query and response packets. TAs should verify that ``NODE2`` functions as a local DNS server, providing recursive resolution on behalf of ``NODE1``: ``NODE2`` performs step-by-step iterative queries to external DNS servers.
 
 .. _sec-project4-task2-http:
 
 Task 2:  (1 points) HTTP
 ============================================================
-TODO: Diff Part 5
 
-HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text and multimedia information over the Internet. Implement a simplified TCP handshake and sliding window scheme on ``NODE1`` to allow it to visit public HTTP resources.
+HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text and multimedia information over the Internet. Implement a simplified TCP handshake and sliding window scheme on ``NODE1`` to allow it to visit public HTTP resources. 
 
 .. _`RFC 1945`:
     https://datatracker.ietf.org/doc/html/rfc1945
@@ -78,6 +77,8 @@ HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text
     - Developer tools of web browsers can be used to inspect the web content
 
     - TCP tools, such as telnet_ and nping_, can be used to bypass TCP implementations when debugging. 
+
+    - If you have not finished the :ref:`Project 3: Task 6 <sec-project3-task6-virtual-network-device>`, you cannot directly use the system's curl tool. Therefore, you need to implement a curl-like command within the Aethernet program to fetch HTML pages.
 
 .. _nping:
     https://nmap.org/nping/
@@ -101,7 +102,7 @@ HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text
     The group specifies the initial sequence numbers the TCP connections of ``NODE1`` from the set: 0x :math:`H_1 H_2 H_3 H_4 H_5 H_6 H_7 H_8`, where, :math:`H_i \in \{1,2,3,4,5,6,7,8\}` and :math:`H_i \ne H_j`, e.g., 0x1234 5678, 0x8765 4321, 0x4321 8765.
 
 
-    In the Aethernet program or the system terminal of ``NODE1``, enter the following or equivalent content::
+    In the system terminal OR the Aethernet program of ``NODE1``, enter the following or equivalent content::
 
         # NODE1
         curl http://www.example.com
