@@ -1,6 +1,6 @@
-.. |semester| replace:: *Fall 2024*
-.. |project0-due| replace:: **Sep. 29, 2024**
-.. |project1-due| replace:: **Oct. 20, 2024**
-.. |project2-due| replace:: **Nov. 17, 2024**
-.. |project3-due| replace:: **Dec. 8, 2024**
-.. |project4-due| replace:: **Jan. 15, 2025**
+.. |semester| replace:: *Fall 2025*
+.. |project0-due| replace:: **Sep. 28, 2025**
+.. |project1-due| replace:: **Oct. 12, 2025**
+.. |project2-due| replace:: **Nov. 16, 2025**
+.. |project3-due| replace:: **Dec. 7, 2025**
+.. |project4-due| replace:: **Jan. 11, 2026**

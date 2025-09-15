@@ -44,6 +44,8 @@ Task 1:  (4 points) DNS
 
 DNS (Domain Name System, `RFC 882`_) associates user-friendly string names with IP addresses. This task revisits :ref:`Project 3: Task 3 <sec-project3-task3-nat>`. Upgrade the NAT in ``NODE2`` to support TCP and UDP. Configure the local DNS server on ``NODE1`` to ``NODE2_3.IP`` (need to implement a local DNS server on ``NODE2``), 10.15.44.11, or 1.1.1.1, so that ``NODE1`` can resolve domain names.
 
+TODO: monitor local DNS server with Wireshark 
+
 .. _`RFC 882`:
     https://datatracker.ietf.org/doc/html/rfc882
 
@@ -62,6 +64,7 @@ DNS (Domain Name System, `RFC 882`_) associates user-friendly string names with 
 
 Task 2:  (1 points) HTTP
 ============================================================
+TODO: Diff Part 5
 
 HTTP (Hypertext Transfer Protocol, `RFC 1945`_) defines a way to distribute text and multimedia information over the Internet. Implement a simplified TCP handshake and sliding window scheme on ``NODE1`` to allow it to visit public HTTP resources.
 
