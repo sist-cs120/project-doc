@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'CS120 Course Project'
-copyright = '2025, Zhice Yang'
+copyright = '2026, Zhice Yang'
 author = 'Zhice Yang'
-release = 'v0.86'
+release = 'v0.87'
 
 
 
